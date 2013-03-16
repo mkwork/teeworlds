@@ -1,2 +1,2 @@
 include_directories(.)
-subdirs(versionsrv)
+subdirs(versionsrv base engine)
