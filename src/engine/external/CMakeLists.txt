@@ -1,1 +1,1 @@
-subdirs(pnglite)
+subdirs(pnglite json-parser)

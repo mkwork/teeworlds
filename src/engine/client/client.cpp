@@ -52,6 +52,7 @@
 #endif
 
 #include "SDL/SDL.h"
+#include "engine/client/keynames.h"
 #ifdef main
 #undef main
 #endif
