@@ -3,4 +3,5 @@ find_package( ZLIB REQUIRED )
 if ( ZLIB_FOUND )
     include_directories( ${ZLIB_INCLUDE_DIRS} )
 endif( ZLIB_FOUND )
-subdirs(versionsrv base engine game mastersrv)
+
+subdirs(versionsrv base engine game mastersrv tools)
