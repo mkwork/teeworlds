@@ -1,0 +1,4 @@
+Project is particaly compiled with CMake. For compling need generated files, which now can be created through bam build system.
+Now compiling:
+	*teeworlds_srv
+	*version_srv
