@@ -1,1 +1,1 @@
-subdirs(server client)
+subdirs(server )#client)

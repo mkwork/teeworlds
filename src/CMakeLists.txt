@@ -9,4 +9,4 @@ if ( SDL_FOUND )
     include_directories( ${SDL_INCLUDE_DIR} )
 endif( SDL_FOUND )
 
-subdirs(versionsrv base engine )#game mastersrv tools)
+subdirs(versionsrv base engine game mastersrv tools)
