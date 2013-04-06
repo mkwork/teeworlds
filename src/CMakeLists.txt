@@ -6,6 +6,7 @@ endif( ZLIB_FOUND )
 
 find_package( SDL REQUIRED )
 if ( SDL_FOUND )
-    include_directories( ${SDL_INCLUDE_DIRS} )
+    include_directories( ${SDL_INCLUDE_DIR} )
 endif( SDL_FOUND )
-subdirs(versionsrv base engine game mastersrv tools)
+
+subdirs(versionsrv base engine )#game mastersrv tools)
