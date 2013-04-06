@@ -1,1 +1,1 @@
-subdirs(pnglite json-parser)
+subdirs(pnglite json-parser wavpack)
