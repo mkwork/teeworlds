@@ -1,43 +1,7 @@
 project(teeworlds)
 cmake_minimum_required(VERSION 2.8)
-#Create generated files 
+
+#generating files location
 set(GENERATED_FILES_PREFIX "${CMAKE_SOURCE_DIR}/src/game/generated")
-set( GENERATED_FILES  ${GENERATED_FILES_PREFIX}/client_data.cpp ${GENERATED_FILES_PREFIX}/client_data.h ${GENERATED_FILES_PREFIX}/server_data.cpp ${GENERATED_FILES_PREFIX}/server_data.h
-    ${GENERATED_FILES_PREFIX}/nethash.cpp ${GENERATED_FILES_PREFIX}/protocol.cpp ${GENERATED_FILES_PREFIX}/protocol.h)
-set(GENERATOR_SCRIPT ${CMAKE_SOURCE_DIR}/datasrc/compile.py)
 
-add_custom_command(OUTPUT ${GENERATED_FILES} 
-
-COMMAND python 
-ARGS ${GENERATOR_SCRIPT} client_content_source > 
-${GENERATED_FILES_PREFIX}/client_data.cpp
-WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-
-COMMAND python 
-ARGS ${GENERATOR_SCRIPT} client_content_header > 
-${GENERATED_FILES_PREFIX}/client_data.h
-WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-
-COMMAND python 
-ARGS ${GENERATOR_SCRIPT} server_content_source > 
-${GENERATED_FILES_PREFIX}/server_data.cpp
-WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-
-COMMAND python 
-ARGS ${GENERATOR_SCRIPT} server_content_header > 
-${GENERATED_FILES_PREFIX}/server_data.h
-WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-
-COMMAND python 
-ARGS ${GENERATOR_SCRIPT} network_source > 
-${GENERATED_FILES_PREFIX}/protocol.cpp
-WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-
-COMMAND python 
-ARGS ${GENERATOR_SCRIPT} network_header > 
-${GENERATED_FILES_PREFIX}/protocol.h
-WORKING_DIRECTORY ${CMAKE_header_DIR}
-
-)
-add_custom_target(generated-files ALL DEPENDS ${GENERATED_FILES})
 subdirs(datasrc src )
