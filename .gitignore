@@ -24,3 +24,5 @@ other/icons/*.res
 /tileset_border*
 /versionsrv*
 CMakeLists.txt.user*
+*.swp
+*.swo
