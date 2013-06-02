@@ -12,3 +12,4 @@ SET_SOURCE_FILES_PROPERTIES(${GENERATED_FILES_PREFIX}/protocol.cpp PROPERTIES GE
 add_executable(teeworlds ${CLIENT_SRC})
 
 target_link_libraries(teeworlds base engine-client editor json-parser)
+install(TARGETS teeworlds DESTINATION ${TEEWORLDS_DESTINATION})

@@ -12,3 +12,4 @@ SET_SOURCE_FILES_PROPERTIES(${GENERATED_FILES_PREFIX}/server_data.cpp PROPERTIES
 SET_SOURCE_FILES_PROPERTIES(${GENERATED_FILES_PREFIX}/protocol.cpp PROPERTIES GENERATED 1)
 add_executable(teeworlds_srv ${SERVER_SRC})
 target_link_libraries(teeworlds_srv base engine-server)
+install(TARGETS teeworlds_srv DESTINATION ${TEEWORLDS_DESTINATION})
