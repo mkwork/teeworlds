@@ -1,6 +1,7 @@
 project(teeworlds)
 cmake_minimum_required(VERSION 2.8)
 
+include(CPack)
 #directory where teeworlds distributionwill be placed by default
 set(TEEWORLDS_DESTINATION teeworlds)
 
